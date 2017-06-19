@@ -75,13 +75,13 @@ def chan_ord(request):
 
 def setup():
     config = Configurator()
+    config.add_route('list', '/')
     config.add_route('sort', '/sort')
     config.add_route('sort_config3', '/sort_config/{first_strategy}/{second_strategy}/{third_strategy}', custom_predicates=(f_strategy,s_strategy,t_strategy,) )
     config.add_route('sort_config2', '/sort_config/{first_strategy}/{second_strategy}', custom_predicates=(f_strategy,s_strategy,) )
     config.add_route('sort_config1', '/sort_config/{first_strategy}', custom_predicates=(f_strategy,) )
     config.add_route('change_order', '/order/{ord}', custom_predicates=(orders,) )
     config.add_route('clean', '/clean')
-    config.add_route('list', '/list')
     config.add_route('add', '/add/{title}/{author}/{ed_year}')
     config.scan()
     return config
