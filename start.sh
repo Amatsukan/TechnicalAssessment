@@ -1,2 +1,2 @@
 #!/bin/sh
-python3 src/pyramid_server.py
+python3 src/app.py

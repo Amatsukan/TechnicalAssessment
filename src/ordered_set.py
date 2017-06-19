@@ -21,6 +21,10 @@ class OrderedSet(collections.MutableSet):
 
     def __contains__(self, key):
         return key in self.map
+    
+    def __getitem__(self, key):
+        if key in self.map:    
+            return self.map[key]
 
     def add(self, key):
         if key not in self.map:
