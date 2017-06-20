@@ -1,8 +1,8 @@
-#StormTech Technical Assessment
+# StormTech Technical Assessment
 
 Books sorting service.
 
-[![Build Status](https://travis-ci.org/rodolfolottin/flask-sortingservice.svg?branch=master)](https://travis-ci.org/rodolfolottin/flask-sortingservice.svg?branch=master)
+[![Build Status](https://travis-ci.org/Amatsukan/TechnicalAssessment.svg?branch=master)](https://travis-ci.org/Amatsukan/TechnicalAssessment.svg?branch=master)
 
 # Installing and running
 
