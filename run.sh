@@ -1,3 +1,3 @@
 #!/bin/bash
-pip install requirements.txt
-python src/app.py
+pip3 install -r requirements.txt
+python3 src/app.py
