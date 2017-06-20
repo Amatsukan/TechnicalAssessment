@@ -1,13 +1,14 @@
+#!/usr/bin/python
 from pyramid_server import *
 import os
+import sys
 
-ON_HEROKU = os.environ.get('ON_HEROKU')
+argc = len(sys.argv)
 
-if ON_HEROKU:
-    # get the heroku port
-    port = int(os.environ.get('PORT', 17995))  #default is 17995
+if argc == 2:
+    port = sys.argv[1]
 else:
-    port = 3000
+	port=3000
 
     
 if __name__ == '__main__':
