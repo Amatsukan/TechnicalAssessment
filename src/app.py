@@ -13,4 +13,4 @@ else:
     
 if __name__ == '__main__':
 	print("running in localhost:{}".format(port))
-	run('0.0.0.0', port)
+	run('0.0.0.0', int(port))
