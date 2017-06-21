@@ -73,6 +73,13 @@ def chan_ord(request):
     bs.set_order(order)
     return Response( "The new sorting order is: {}".format(order) )
 
+
+@view_config(route_name='help')
+def help(request):
+    _here = os.path.dirname(__file__)
+    _file2send = open(os.path.join( _here, 'static', '../DOCFILE')).read()
+    return Response(content_type='text/plain', body=_file2send)
+
 def setup():
     config = Configurator()
     config.add_route('list', '/')
@@ -83,6 +90,7 @@ def setup():
     config.add_route('change_order', '/order/{ord}', custom_predicates=(orders,) )
     config.add_route('clean', '/clean')
     config.add_route('add', '/add/{title}/{author}/{ed_year}')
+    config.add_route('help', '/help')
     config.scan()
     return config
 

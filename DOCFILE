@@ -6,12 +6,15 @@ ________________|_______________________________________________________|_______
 /order			| Set sort order, whether it is ascending or descending | {ord}													|
 /clean			| Remove all books from bookshelf 						| ---													|
 /add			| Adds a new book on the bookshelf						| {title}/{author}/{ed_year}							|
+/help			| show this help										| ---													|
 ----------------|-------------------------------------------------------|-------------------------------------------------------|
 
 
-{URL}/sort_config/
+{URL}/sort_config/ :
  	
- 	The ordering mechanism is based on the composition of ordering strategies, each computer calls its composition to order before and after it orders what has already been ordered, otherwise it only orders. Strategies: By author, title or edition year (aka ed_year)
+ 	The ordering mechanism is based on the composition of ordering strategies, each computer calls its composition to order before 
+ 	and after it orders what has already been ordered, otherwise it only orders. 
+ 	Strategies: By author, title or edition year (aka ed_year)
 
 first_strategy	(Required) 	- Primary sorting strategy
 second_strategy	(Opitional) - Secondary ordering strategy
@@ -24,14 +27,17 @@ third_strategy	(Opitional)	- Tertiary sorting strategy
 	To sort by year, title and author
 		{URL}/sort_config/ed_year/title/author
 
+--------------------------------------------------------------------------------------------------------------------
 
-{URL}/order
+{URL}/order :
 ord	(Required) - Set whether the order is ascending or descending
 	ex:
 		{URL}/order/desc
 		{URL}/order/asc
 
-{URL}/add
+--------------------------------------------------------------------------------------------------------------------
+
+{URL}/add :
 Title 	(Required)	- Title of the book to be added
 author 	(Required)	- Author(s) of the book to be added
 ed_year (Required)	- Edition year of the book to be added
