@@ -20,4 +20,4 @@ def any_of(segment_name, *allowed):
 f_strategy = any_of('first_strategy','author', 'title', 'ed_year')
 s_strategy = any_of('second_strategy','author', 'title', 'ed_year')
 t_strategy = any_of('third_strategy','author', 'title', 'ed_year')
-orders = any_of('ord','des', 'asc')
+orders = any_of('ord','desc', 'asc')
