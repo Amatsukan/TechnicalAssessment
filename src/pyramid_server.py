@@ -5,6 +5,7 @@ from pyramid.view import view_config
 from pyramid.response import Response
 from config import *
 
+import os
 
 @view_config(route_name='sort')
 def sort_books(request, test_without_try_except = False):
@@ -77,7 +78,7 @@ def chan_ord(request):
 @view_config(route_name='help')
 def help(request):
     _here = os.path.dirname(__file__)
-    _file2send = open(os.path.join( _here, 'static', '../DOCFILE')).read()
+    _file2send = open(os.path.join( _here, '..', 'DOCFILE')).read()
     return Response(content_type='text/plain', body=_file2send)
 
 def setup():
