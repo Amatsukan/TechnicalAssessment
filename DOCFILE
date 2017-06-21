@@ -1,0 +1,39 @@
+Route			| What the hell?										| Params											   	|	
+________________|_______________________________________________________|_______________________________________________________|							
+/				| List all books on the bookshelf 						| ---													|
+/sort 			| Sort the book set(bookshelf)							| ---													|
+/sort_config	| Configure sort options								| {first_strategy}/{second_strategy}/{third_strategy}   |
+/order			| Set sort order, whether it is ascending or descending | {ord}													|
+/clean			| Remove all books from bookshelf 						| ---													|
+/add			| Adds a new book on the bookshelf						| {title}/{author}/{ed_year}							|
+----------------|-------------------------------------------------------|-------------------------------------------------------|
+
+
+{URL}/sort_config/
+ 	
+ 	The ordering mechanism is based on the composition of ordering strategies, each computer calls its composition to order before and after it orders what has already been ordered, otherwise it only orders. Strategies: By author, title or edition year (aka ed_year)
+
+first_strategy	(Required) 	- Primary sorting strategy
+second_strategy	(Opitional) - Secondary ordering strategy
+third_strategy	(Opitional)	- Tertiary sorting strategy
+	ex: 
+	To sort by edition year
+		{URL}/sort_config/ed_year
+	To sort by author and title
+		{URL}/sort_config/author/title
+	To sort by year, title and author
+		{URL}/sort_config/ed_year/title/author
+
+
+{URL}/order
+ord	(Required) - Set whether the order is ascending or descending
+	ex:
+		{URL}/order/desc
+		{URL}/order/asc
+
+{URL}/add
+Title 	(Required)	- Title of the book to be added
+author 	(Required)	- Author(s) of the book to be added
+ed_year (Required)	- Edition year of the book to be added
+	ex:
+		{URL}/add/book1/author1/1950

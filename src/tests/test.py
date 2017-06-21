@@ -30,14 +30,14 @@ class APITest(unittest.TestCase):
 
     def testChangeOrderAscending(self):
         request = testing.DummyRequest()
-        request.matchdict = {'ord':'ascendent'}
+        request.matchdict = {'ord':'asc'}
         response = chan_ord(request)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(bs.strategy.reverse, False)
 
     def testChangeOrderDescending(self):
         request = testing.DummyRequest()
-        request.matchdict = {'ord':'descendent'}
+        request.matchdict = {'ord':'desc'}
         response = chan_ord(request)
         self.assertEqual(response.status_code, 200)
         self.assertEqual(bs.strategy.reverse, True)

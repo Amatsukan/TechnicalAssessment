@@ -38,7 +38,7 @@ class Bookshelf:
         self.strategy = Title_sort().setComposition(Author_sort())#default sort composition, title and author
 
     def set_order(self, order_str):
-        if(order_str == "descendent"):
+        if(order_str == "desc"):
             self.strategy.desc_order()
         else:
             self.strategy.asc_order()

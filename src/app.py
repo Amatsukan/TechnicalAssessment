@@ -10,7 +10,13 @@ if argc == 2:
 else:
 	port=3000
 
+
+    """Book Sorter api
+    Args:
+        Specific port
+    """
+
     
 if __name__ == '__main__':
-	print("running in localhost:{}".format(port))
+	print("running in http://localhost:{}".format(port))
 	run('0.0.0.0', int(port))
